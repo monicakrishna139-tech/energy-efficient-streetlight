@@ -14,6 +14,10 @@ The system ensures that lights are **ON only when required** (during low light c
 - Hardware: Arduino board, LDR (Light Dependent Resistor), LEDs  
 
 ## 🚀 How it Works  
-1. The **LDR sensor** continuously measures the ambient light level.  
-2. If the light intensity falls below a certain threshold, the streetlight (LED) turns **ON**.  
-3. If sufficient natural light is detected, the light turns **OFF** automatically.
+Daytime (bright) → Streetlight OFF.
+
+Nighttime (dark, LDR < threshold):
+
+No vehicle → LED glows dim (PWM low value).
+
+Vehicle within 500 cm → LED brightens fully.
